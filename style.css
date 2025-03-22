@@ -1,0 +1,100 @@
+:root {
+    /* colors */
+    --clr-primary: hsl(263, 90%, 61%);
+    --clr-neutral-95: hsl(0, 0%, 95%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-borders: rgba(0, 0, 0, 0.02);
+
+    /* font size */
+    --fs-16: 1rem;
+    --fs-20: 1.25rem;
+    --fs-24: 1.5rem;
+    --fs-32: 2rem;
+    --fs-40: 2.5rem;
+
+    /* font weight */
+    --fw-norm: 400;
+    --fw-semi-bold: 600;
+    --fw-bold: 800;
+
+    /* spaces */
+    --sp-8: 0.5rem;
+    --sp-16: 1rem;
+    --sp-24: 1.5rem;
+    --sp-32: 2rem;
+    --sp-40: 2.5rem;
+    --sp-48: 3rem;
+    --sp-56: 3.5rem;
+}
+
+body {
+
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-height: 100vh;
+}
+
+.navbar {
+    background-color: var(--clr-primary);
+    height: var(--sp-56);
+    display: flex;
+    position: relative;
+}
+
+.navbar a {
+    display: block;
+    text-decoration: none;
+    color: var(--clr-neutral-100);
+    margin: var(--sp-16);
+}
+
+.logo {
+    font-size: var(--fs-20);
+    font-weight: var(--fw-semi-bold);
+}
+
+/* .links {
+    position: relative;
+    top: var(--sp-16);
+    bottom: var(--sp-16);
+
+} */
+
+.container {
+    padding: calc(var(--sp-24)/2) var(--sp-24) calc(var(--sp-24)/2) var(--sp-24);
+    width: clamp(250px, 50vw, 890px);
+    margin-inline: auto;
+    margin-top: calc(var(--sp-56)*2);
+    background-color: var(--clr-neutral-95);
+    box-shadow: var(--clr-borders) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: var(--sp-8);
+}
+
+h1 {
+    font-size: var(--fs-40);
+    font-weight: var(--fw-bold);
+    line-height: 0.5;
+}
+
+input[type=text] {
+    margin-inline: var(--sp-8);
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--sp-8);
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+#result_Fibonacci {
+    font-size: var(--fs-32);
+    font-weight: var(--fw-semi-bold);
+    text-decoration: underline;
+    text-align: center;
+}
