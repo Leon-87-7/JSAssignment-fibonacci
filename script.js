@@ -16,8 +16,5 @@ function calcFibonacci(n) {
 const x = 8;
 const y = calcFibonacci(x);
 
-// console.log(y);
-
-document.getElementById('Fn_Fibonacci').innerHTML = `${x}`;
-
+document.getElementsByName('Fn_Fibonacci')[0].placeholder = '8';
 document.getElementById('result_Fibonacci').innerHTML = `${y}`;
